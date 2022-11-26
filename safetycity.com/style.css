@@ -209,6 +209,16 @@ hr{
     border:20px solid #53B8C6;
 	margin-left: 1%;
 	margin-top: 2%;
+	height: auto;
+}
+.center_moder{
+	width: 94%;
+	padding: 20px;
+	background-color: #A1D9D9;
+    border:20px solid #53B8C6;
+	margin-left: 1%;
+	margin-top: 2%;
+	height: auto;
 }
 .th1{
 	width: 100px;
@@ -265,4 +275,18 @@ hr{
 }
 .name_header{
 	font-family: 'Inknut Antiqua', serif;
+}
+.d10{
+	border-radius: 5px;
+	border: 2px solid white;
+	background-color:#85d6d6;
+	padding: 5 16 5 16;
+	margin-top: 20px;
+}
+.footer_lk{
+	position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+}
+.footer_moder{
+	margin-top: 1%;
 }
