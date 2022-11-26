@@ -127,10 +127,10 @@ session_start();
 						?>
 						<form action='lk.php' method='post'>
 							<input type='hidden' name='id' value='<? echo $id; ?>'>
-							<input type='submit' name='com_del2' value='Удалить комментарий'>
+							<input type='submit' class='d10' name='com_del2' value='Удалить комментарий'>
 						</form>
 						<form action='lk.php' method='post'>
-							<input type='submit' value='Нет'>
+							<input type='submit' class='d10' value='Нет'>
 						</form>
 						<?
 					}
@@ -159,7 +159,7 @@ session_start();
 							<input type="hidden" name="id" value="<? echo $row[0]; ?>">
 							<p>Комментарий</p>
 							<input type="text" name="comment" value="<? echo $row[2]; ?>">
-							<input type="submit" name="com_red2" value="Изменить комментарий">
+							<input type="submit" name="com_red2" class='d10' value="Изменить комментарий">
 						</form>
 						<?
 						}
@@ -172,18 +172,14 @@ session_start();
 							$query="UPDATE `comments` SET `comment`='$comment' WHERE `id`='$id' ";
 							//отправка запроса
 							$result=mysqli_query($conn,$query);
-
-							echo "<h3>Комментарий изменен!</h3><br>";
-							echo "<h3><a href='lk.php' class='a1' >Обновить страницу</a></h3>";
 					}
 						?>
-					<div style='background: lightgrey;'>
-					<table border=0 class='comments' style='background:#fff; font-size:20px; margin-right:2%;' cellspacing='0'>
+					<div style='background: lightgrey; width:50%;  padding-bottom:30px; margin-top:10%; float:right; margin-top:30px;'>
+				<h3 style='margin-left:2%; font-size:20px;'>Все комментарии</h3>
+				<table style='margin-top:20px; margin-left:2%; width:96% ;background:#fff; font-size:20px;' cellspacing='0'>
+				<?
 
-						<?
-
-						//запрос на отображение категорий
-						$query="SELECT * FROM `comments` WHERE `user`='$login'";
+						$query="SELECT * FROM `comments` where `user`='$login'";
 						//отправка запроса
 						$result=mysqli_query($conn,$query);
 						//цикл с выводом данных из БД
@@ -196,37 +192,42 @@ session_start();
 								<td class='th2'>
 									<form action='lk.php' method='post'>
 										<input type='hidden' name='id' value='<? echo $row[0]; ?>'>
-										<input type='submit' name='com_red' value='Изменить'>
+										<input type='submit'  class='d10'name='com_red' value='Изменить'>
 									</form>
 								</td>
 								<td class='th2'>
 									<form action='lk.php' method='post'>
 										<input type='hidden' name='id' value='<? echo $row[0]; ?>'>
-										<input type='submit' name='com_del' value='Удалить'>
+										<input type='submit' class='d10' name='com_del' value='Удалить'>
 									</form>
 								</td>
 							</tr>
 							<?
-						}
+						}	
 					}
-				?>
+					?>
 				</table>
+				<br>
+				<span style='margin-left:2%; font-size:25px; margin-top:70px;'>С отмеченными
+					<input type='submit' style='background:none; border:none; width:50px; height:50px; font-size:43px;' class='a4' name='search' value=&#9998;>
+					<input type='submit' style='background:none; border:none; width:60px; height:50px; font-size:40px;' class='a4' name='search' value=&#10060;>
+				</span>
 				</div>
 
 		</main>
 		<footer class='footer_LK'>
 			<!-- Пользовательское соглашение -->
-			<div class='footer_cont'  style='margin-left:20px;'>
+			<div class='footer_cont' style='margin-left:100px;'>
+				<a href='index.php' style='color:white; font-size:20px; text-decoration: none;' class=''>Copyright &copy; 2020 safetycity.com<br> Все права защищены.</a>
+			</div>
+			<div class='footer_cont'  style='margin-left:80px;'>
 				<a href='index.php' style=' color:white; font-size:20px; text-decoration: none;' class=''> Пользовательское<br> соглашение </a>
 			</div>
 			<!-- О проекте -->
-			<div class='footer_cont' style='margin-left:140px;'>
+			<div class='footer_cont' style='margin-left:100px;'>
 				<a href='index.php' style='color:white; font-size:20px; text-decoration: none;' class=''>О создательях</a>
 			</div>
 			<!-- Команда -->
-			<div class='footer_cont' style='margin-left:140px;'>
-				<a href='index.php' style='color:white; font-size:40px; text-decoration: none;' class=''>offSunrise</a>
-			</div>
 			<!-- WhatsApp -->
 			<div class='footer_cont' style='margin-left:140px;'>
 				<img src='img/2.png' style='height:50px; width:50px;' alt='whatsapp_img'> <br> <a style='color:white; font-size:20px;'>WhatsApp</a>
@@ -236,8 +237,8 @@ session_start();
 				<img src='img/3.png' style='height:50px; width:50px;' alt='VK_img'> <br> <a style='color:white; font-size:20px;'>ВКонтакте</a>
 			</div>
 			<!-- Inst -->
-			<div class='footer_cont' style='margin-left:140px;'>
-				<img src='img/4.png' action='auto.php' style='height:50px; width:50px;' alt='inst_img'> <br> <a style='color:white; font-size:20px;'>ВКонтакте</a>
+			<div class='footer_cont' style='margin-left:120px;'>
+				<img src='img/4.png' action='auto.php' style='height:50px; width:50px;' alt='inst_img'> <br> <a style='color:white; font-size:20px;'>Инстаграм</a>
 			</div>
 		</footer>
 	</body>
