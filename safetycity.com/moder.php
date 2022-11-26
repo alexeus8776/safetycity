@@ -26,7 +26,7 @@ session_start();
 		<!-- Основная часть -->
 		<main>
 			<!-- center -->
-			<section class='center_LK'>
+			<section class='center_moder'>
 			<?
 			if($_SESSION['login']!=''){
 				?>
@@ -198,13 +198,13 @@ session_start();
 								<td class='th2'>
 									<form action='moder.php' method='post'>
 										<input type='hidden' name='id' value='<? echo $row[0]; ?>'>
-										<input type='submit' name='com_red' value='Изменить'>
+										<input type='submit'  class='d10'name='com_red' value='Изменить'>
 									</form>
 								</td>
 								<td class='th2'>
 									<form action='moder.php' method='post'>
 										<input type='hidden' name='id' value='<? echo $row[0]; ?>'>
-										<input type='submit' name='com_del' value='Удалить'>
+										<input type='submit' class='d10' name='com_del' value='Удалить'>
 									</form>
 								</td>
 							</tr>
@@ -220,19 +220,19 @@ session_start();
 				</div>
 
 		</main>
-		<footer class='footer_LK'>
+		<footer class='footer_moder'>
 			<!-- Пользовательское соглашение -->
-			<div class='footer_cont'  style='margin-left:60px;'>
+			<div class='footer_cont' style='margin-left:100px;'>
+				<a href='index.php' style='color:white; font-size:20px; text-decoration: none;' class=''>Copyright &copy; 2020 safetycity.com<br> Все права защищены.</a>
+			</div>
+			<div class='footer_cont'  style='margin-left:80px;'>
 				<a href='index.php' style=' color:white; font-size:20px; text-decoration: none;' class=''> Пользовательское<br> соглашение </a>
 			</div>
 			<!-- О проекте -->
-			<div class='footer_cont' style='margin-left:140px;'>
+			<div class='footer_cont' style='margin-left:100px;'>
 				<a href='index.php' style='color:white; font-size:20px; text-decoration: none;' class=''>О создательях</a>
 			</div>
 			<!-- Команда -->
-			<div class='footer_cont' style='margin-left:140px;'>
-				<a href='index.php' style='color:white; font-size:40px; text-decoration: none;' class=''>offSunrise</a>
-			</div>
 			<!-- WhatsApp -->
 			<div class='footer_cont' style='margin-left:140px;'>
 				<img src='img/2.png' style='height:50px; width:50px;' alt='whatsapp_img'> <br> <a style='color:white; font-size:20px;'>WhatsApp</a>
@@ -242,8 +242,8 @@ session_start();
 				<img src='img/3.png' style='height:50px; width:50px;' alt='VK_img'> <br> <a style='color:white; font-size:20px;'>ВКонтакте</a>
 			</div>
 			<!-- Inst -->
-			<div class='footer_cont' style='margin-left:140px;'>
-				<img src='img/4.png' action='auto.php' style='height:50px; width:50px;' alt='inst_img'> <br> <a style='color:white; font-size:20px;'>ВКонтакте</a>
+			<div class='footer_cont' style='margin-left:120px;'>
+				<img src='img/4.png' action='auto.php' style='height:50px; width:50px;' alt='inst_img'> <br> <a style='color:white; font-size:20px;'>Инстаграм</a>
 			</div>
 		</footer>
 	</body>
